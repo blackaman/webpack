@@ -25,11 +25,10 @@ let plugin = [
     template: path.resolve(__dirname, 'app/index.html')
   }),
   new CleanWebpackPlugin(['build']),
-  extractSass,
-  // uglifyjs,
   new webpack.DefinePlugin({
     'process.env.NODE_ENV': JSON.stringify('dev')
-  })
+  }),
+  extractSass
 ]
 plugin = debug ? plugin : [...plugin, uglifyjs];
 
