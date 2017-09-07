@@ -72,5 +72,8 @@ module.exports = {
   devServer: {
     host: '0.0.0.0'
   },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
   plugins: [...plugin]
 }
