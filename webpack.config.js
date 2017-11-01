@@ -5,7 +5,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 
-const debug = true;
+const debug = !process.argv.includes('--env');
 const extractSass = new ExtractTextPlugin({
     filename: "[name].[contenthash].css"
 });
